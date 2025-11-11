@@ -16,7 +16,7 @@ public class Controller {
     private Service service;
 
     @PostMapping("/saveData")
-    public String saveUser(UserTable user){
+    public String saveUser(@RequestBody  UserTable user){
         service.saveUser(user);
         return "UserSaved Successfully";
     }
